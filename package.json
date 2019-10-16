@@ -1,0 +1,8 @@
+{
+  "name": "go-barber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Valdjr/go-barber.git",
+  "author": "Valdir Jr <valdirdallagojr@gmail.com>",
+  "license": "MIT"
+}
