@@ -1,0 +1,26 @@
+import Notification from '../schemas/Notification';
+import User from '../models/User';
+
+class NotificationController {
+    async index(req, res) {
+        /**
+         * Verificar se userid é provider
+         */
+        const isProvider = await User.findOne({
+            where: { id: req.userId, provider: true },
+        });
+        if (!isProvider) {
+            return res.status(400).json({ error: 'voce não é um provider' });
+        }
+
+        const notifications = await Notification.find({
+            user: req.userId,
+        })
+            .sort({ createdAt: 'desc' })
+            .limit(20);
+
+        return res.json(notifications);
+    }
+}
+
+export default new NotificationController();
