@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "bee-queue": "^1.2.2",
     "body-parser": "^1.19.0",
     "date-fns": "^2.0.0-beta.5",
     "express": "^4.17.1",
@@ -34,6 +35,7 @@
   },
   "scripts": {
     "dev": "nodemon src/index.js",
-    "dev:debug": "nodemon --inspect src/index.js"
+    "dev:debug": "nodemon --inspect src/index.js",
+    "queue": "nodemon src/queue.js"
   }
 }
