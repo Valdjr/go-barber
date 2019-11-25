@@ -1,4 +1,4 @@
 export default {
-    secret: 'gobarberhashaleatorio',
+    secret: process.env.APP_SECRET,
     expiresIn: '7d',
 };
